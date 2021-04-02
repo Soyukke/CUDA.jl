@@ -22,6 +22,7 @@ using Libdl
             "nvml"
         end
     else
+        @info "NVML.jl: libnvidia-ml.so.1"
         "libnvidia-ml.so.1"
     end
 end

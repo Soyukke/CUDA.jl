@@ -129,6 +129,7 @@ function compute_processes(dev::Device)
 
     return Dict(map(infos) do info
             pid = Int(info.pid)
+            @info "compute_processes"
             used_gpu_memory = if info.usedGpuMemory == (NVML.NVML_VALUE_NOT_AVAILABLE %
                                                         typeof(info.usedGpuMemory))
                 missing
