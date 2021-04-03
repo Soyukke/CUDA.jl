@@ -8,13 +8,13 @@ function CUDACompilerTarget(dev::CuDevice; kwargs...)
         # synchronization stack in the presence of shared memory and thread-divergent exit.
         exitable = false
     end
-    @info "CUDACompilerTarget"
+    # @info "CUDACompilerTarget"
     # if !has_nvml() || NVML.driver_version() < v"460"
     if false
         # TODO wsl2はNVML.driver_versionで落ちる。そもそもNVMLが動いていない
         # * NVIDIA Driver 470.14
         # * Windows 21343.1000
-        @info "CUDACompilerTarget: NVML.driver_version()"
+        # @info "CUDACompilerTarget: NVML.driver_version()"
         # JuliaGPU/CUDA.jl#431
         # TODO: tighten this conditional
         exitable = false
